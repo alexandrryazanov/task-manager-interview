@@ -21,6 +21,20 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## The second project (notification microservice)
+
+```bash
+$ git clone https://github.com/alexandrryazanov/task-manager-notification.git
+```
+
+## Videos
+
+```bash
+https://drive.google.com/file/d/1SPywjf9kXbWQKpy6jUrlwlHuhdbvyodf/view?usp=sharing
+https://drive.google.com/file/d/1CJ_wM6LGUqVyy40kol3MAtaYbI9cJCeQ/view?usp=sharing
+```
+
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -30,6 +44,7 @@
 ```bash
 $ npm install
 ```
+
 
 ## Compile and run the project
 

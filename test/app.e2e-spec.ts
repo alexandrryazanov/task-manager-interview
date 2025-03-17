@@ -4,7 +4,7 @@ import * as request from 'supertest';
 import { App } from 'supertest/types';
 import { AppModule } from '../src/modules/app/app.module';
 
-describe('AppController (e2e)', () => {
+describe('TasksController (e2e)', () => {
   let app: INestApplication<App>;
 
   beforeEach(async () => {
