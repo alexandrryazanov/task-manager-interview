@@ -14,19 +14,22 @@ datasource db {
 }
 
 model User {
-  id            Int      @id @default(autoincrement())
-  email         String   @unique
-  ownedTasks    Task[]   @relation("owner")
-  assignedTasks Task[]   @relation("assignees")
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id             Int      @id @default(autoincrement())
+  email          String   @unique
+  ownedTasks     Task[]   @relation("owner")
+  assignedTasks  Task[]   @relation("assignees")
+  hashedPassword String
+  salt           String
+  permissions    Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
 
 model Task {
   id          Int      @id @default(autoincrement())
   title       String   @unique
   description String?
-  owner       User     @relation("owner", fields: [ownerId], references: [id])
+  owner       User     @relation("owner", fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId     Int
   assignees   User[]   @relation("assignees")
   createdAt   DateTime @default(now())

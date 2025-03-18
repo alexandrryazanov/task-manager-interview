@@ -5,9 +5,17 @@ import { PrismaService } from '../prisma/prisma.service';
 import { UsersModule } from '../users/users.module';
 import { TasksModule } from '../tasks/tasks.module';
 import { KafkaModule } from '../kafka/kafka.module';
+import { ConfigModule } from '@nestjs/config';
+import { AuthModule } from '@/modules/auth/auth.module';
 
 @Module({
-  imports: [UsersModule, TasksModule, KafkaModule],
+  imports: [
+    ConfigModule.forRoot(),
+    AuthModule,
+    UsersModule,
+    TasksModule,
+    KafkaModule,
+  ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
 })

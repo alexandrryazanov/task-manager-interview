@@ -23,7 +23,7 @@ export class TasksService {
       },
     });
 
-    await this.kafkaService.sendMessage('tasks', task);
+    //await this.kafkaService.sendMessage('tasks', task);
 
     return task;
   }
